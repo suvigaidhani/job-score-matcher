@@ -1,0 +1,85 @@
+/* Whole page layout centered */
+.login-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+}
+
+/* Top navigation */
+.top-nav {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1b2a41;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #1d5efd;
+  cursor: pointer;
+}
+
+/* Login card centered AND FIXED */
+.login-card {
+  margin-top: 50px;
+  width: 380px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form styling */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background: #1d5efd;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0d4ae6;
+}
+
+.footer-text {
+  margin-top: 16px;
+  color: #555;
+}
+
+.signup-link {
+  color: #1d5efd;
+  cursor: pointer;
+}

@@ -1,0 +1,119 @@
+.employer-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* NAVBAR same style */
+.top-nav {
+  width: 100%;
+  padding: 20px 40px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1b2a41;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #1d5efd;
+  cursor: pointer;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.header-row h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1b1b1b;
+}
+
+.add-btn {
+  background-color: #1e64ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+  white-space: nowrap;     /* Prevent breaking the text */
+}
+.post-btn{
+     background-color: #1e64ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+  white-space: nowrap; 
+  width:150px;
+}
+
+.post-btn:hover {
+  background-color: #004ce8;
+}
+.add-btn:hover {
+  background-color: #004ce8;
+}
+
+.employer-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+}
+
+.job-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.job-desc {
+  margin: 10px 0;
+  color: #666;
+}
+
+.view-btn {
+  padding: 10px 14px;
+  background: #1d5efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #0b49d0;
+}
+
+.empty-text {
+  margin-top: 20px;
+  color: #666;
+}
