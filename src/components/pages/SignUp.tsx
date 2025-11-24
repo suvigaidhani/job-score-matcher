@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import supabase from "../../lib/supabaseClient";
-import "./Signup.css";
+import "../styles/Signup.css";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -12,12 +12,11 @@ export default function Signup() {
   async function handleSignup(e: any) {
     e.preventDefault();
 
-    //Sign up user with role stored INSIDE AUTH METADATA
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
-        data: { role }, //save role in AUTH, not in profiles
+        data: { role }, 
       },
     });
 
@@ -30,8 +29,6 @@ export default function Signup() {
     const user = data.user;
 
     if (!user) return alert("Signup failed.");
-
-    //Insert into profiles only if row does not exist
     const { error: profileErr } = await supabase
       .from("profiles")
       .upsert(

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import supabase from "../../lib/supabaseClient";
-import "./CreateJob.css";
+import "../styles/CreateJob.css";
 
 export default function CreateJob() {
   const [title, setTitle] = useState("");
@@ -9,13 +9,10 @@ export default function CreateJob() {
   const [experience, setExperience] = useState("");
   const navigate = useNavigate();
 
-  // ------------------------------
-  // 🚀 Create Job Handler
-  // ------------------------------
   async function handleCreateJob(e: any) {
     e.preventDefault();
 
-    // 🔥 Get logged in user properly
+   
     const { data: userData, error: userError } = await supabase.auth.getUser();
 
     if (userError || !userData?.user) {
@@ -25,9 +22,6 @@ export default function CreateJob() {
 
     const user = userData.user;
 
-    // ------------------------------------
-    // 🚨 Check if the user is an employer
-    // ------------------------------------
     const { data: profile, error: profileError } = await supabase
       .from("profiles")
       .select("role")
@@ -45,14 +39,12 @@ export default function CreateJob() {
       return;
     }
 
-    // ------------------------------------
-    // 📝 Insert job into jobs table
-    // ------------------------------------
+  
     const { error: insertError } = await supabase.from("jobs").insert({
       title,
       description,
       experience: Number(experience),
-      user_id: user.id, // 🔥 Required for RLS
+      user_id: user.id, 
     });
 
     if (insertError) {

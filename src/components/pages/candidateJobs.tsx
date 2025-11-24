@@ -3,7 +3,7 @@ import { FaPaperPlane  } from "react-icons/fa";
 
 import supabase from "../../lib/supabaseClient";
 import { useNavigate } from "react-router-dom";
-import "./CandidateJobs.css";
+import "../styles/candidateJobs.css";
 
 export default function CandidateJobs() {
   const [jobs, setJobs] = useState<any[]>([]);
@@ -36,7 +36,7 @@ export default function CandidateJobs() {
           Logout
         </span>
       </nav>
-
+    
       <div className="jobs-container">
         <h2 className="page-title">Available Jobs</h2>
 

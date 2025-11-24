@@ -2,7 +2,7 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 serve(async (req) => {
   try {
-    const body = await req.json(); // ← Do NOT JSON.parse manually
+    const body = await req.json(); 
     const { resume_text } = body;
 
     if (!resume_text) {
@@ -12,8 +12,7 @@ serve(async (req) => {
       );
     }
 
-    // ---- Your existing AI logic goes here ----
-    // Keep whatever logic worked in your old project:
+   
     const result = await processResume(resume_text);
 
     return new Response(
@@ -34,7 +33,6 @@ serve(async (req) => {
   }
 });
 
-// Replace with your actual working logic
 async function processResume(text: string) {
   return {
     score: 75,

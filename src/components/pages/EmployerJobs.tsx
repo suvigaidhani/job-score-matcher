@@ -3,7 +3,7 @@ import { FaEye  } from "react-icons/fa";
 
 import { useNavigate } from "react-router-dom";
 import supabase from "../../lib/supabaseClient";
-import "./EmployerJobs.css";
+import "../styles/EmployerJobs.css"
 
 export default function EmployerJobs() {
   const [jobs, setJobs] = useState<any[]>([]);
@@ -17,7 +17,6 @@ export default function EmployerJobs() {
     const user = (await supabase.auth.getUser()).data.user;
     if (!user) return;
 
-    // FIXED: use user_id not employer_id
     const { data, error } = await supabase
       .from("jobs")
       .select("*")

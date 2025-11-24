@@ -1,4 +1,4 @@
-import "./Home.css";
+import "../styles/Home.css";
 import { FaUserTie, FaUsers, FaSignInAlt, FaUserPlus,  FaPaperPlane  } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -28,7 +28,6 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* HERO SECTION */}
       <section className="hero-section">
         <div className="hero-overlay"></div>
 
@@ -41,7 +40,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURES */}
       <section className="features-row">
         <div className="feature-card">
           <FaUserTie className="feature-icon" />
@@ -62,7 +60,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA SECTION */}
       <section className="cta-section">
         <h2>Join Job Matcher Today</h2>
         <p>Connect with opportunities tailored to your skills.</p>
@@ -81,7 +78,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <p>
           © {new Date().getFullYear()} JobMatcher — Smart Job Matching Powered

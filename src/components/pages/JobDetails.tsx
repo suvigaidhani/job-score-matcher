@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import supabase from "../../lib/supabaseClient";
-import "./JobDetails.css";
+import "../styles/JobDetails.css"
 
 export default function JobDetails() {
   const { jobId } = useParams();
@@ -62,12 +62,15 @@ export default function JobDetails() {
         </span>
       </nav>
 
+       <span  className="nav-link" onClick={() => navigate("/candidate/jobs")}>
+          Back
+        </span>
       <div className="jobdetails-card">
         <h2 className="job-title">{job.title}</h2>
         <p className="job-desc">{job.description}</p>
 
         <h3 className="apply-heading">Apply for this job</h3>
-
+       
         <form onSubmit={handleApply} className="apply-form">
           <label>Name</label>
           <input

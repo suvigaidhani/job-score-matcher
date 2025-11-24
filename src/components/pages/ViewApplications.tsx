@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import supabase from "../../lib/supabaseClient";
-import "./ViewApplications.css";
+import "../styles/ViewApplications.css";
 
 export default function ViewApplications() {
   const [applications, setApplications] = useState<any[]>([]);
@@ -68,10 +68,17 @@ Concerns: ${parsed.concerns.join(", ")}
       </nav>
 
       <div className="applications-container">
-        <h2>Applications Received</h2>
+        <h2>Applications Received   <button className="nav-link" onClick={() => navigate("/employer/jobs")}>
+          Back
+        </button></h2>
+         
 
         {applications.length === 0 && (
-          <p className="empty-text">No applications yet for this job.</p>
+          <p className="empty-text">No applications yet for this job.
+          <span className="nav-link" onClick={() => navigate("/employer/jobs")}>
+          Back
+        </span>
+        </p>
         )}
 
         {applications.map((app) => (
