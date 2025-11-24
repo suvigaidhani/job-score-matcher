@@ -4,14 +4,16 @@ import Signup from "./components/pages/SignUp";
 import CandidateJobs from "./components/pages/candidateJobs";
 import JobDetails from "./components/pages/JobDetails";
 import EmployerJobs from "./components/pages/EmployerJobs";
-import CreateJob from "./components/pages/createJob";
+import CreateJob from "./components/pages/CreateJob";
 import ViewApplications from "./components/pages/ViewApplications";
+import Home from "./components/pages/Home";
 
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element= {<Signup />} />
         <Route path="/candidate/jobs" element={<CandidateJobs />} />

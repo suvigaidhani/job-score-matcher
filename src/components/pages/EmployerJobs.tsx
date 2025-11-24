@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaEye  } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
 import supabase from "../../lib/supabaseClient";
 import "./EmployerJobs.css";
@@ -38,9 +40,9 @@ export default function EmployerJobs() {
     <div className="employer-page">
       <nav className="top-nav">
         <h1 className="logo" onClick={() => navigate("/employer/jobs")}>
-          Job Match Scorer
+          Job Matcher
         </h1>
-        <span className="nav-link" onClick={() => navigate("/login")}>
+        <span className="nav-link" onClick={() => navigate("/")}>
           Logout
         </span>
       </nav>
@@ -69,7 +71,7 @@ export default function EmployerJobs() {
               className="view-btn"
               onClick={() => openApplications(job.id)}
             >
-              View Applications
+             <FaEye /> View Applications
             </button>
           </div>
         ))}

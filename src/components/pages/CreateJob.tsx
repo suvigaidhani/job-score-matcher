@@ -68,7 +68,7 @@ export default function CreateJob() {
   return (
     <div className="page-wrapper">
       <nav className="top-nav">
-        <h1 className="logo">Job Match Scorer</h1>
+        <h1 className="logo">Job Matcher</h1>
         <span className="nav-link" onClick={() => navigate("/employer/jobs")}>
           Back to Jobs
         </span>

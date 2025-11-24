@@ -66,6 +66,7 @@
   transition: 0.2s;
   white-space: nowrap; 
   width:150px;
+  margin-bottom:20px;
 }
 
 .post-btn:hover {
@@ -107,6 +108,8 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  width:200px;
+  margin-left:500px
 }
 
 .view-btn:hover {

@@ -12,12 +12,12 @@ export default function Signup() {
   async function handleSignup(e: any) {
     e.preventDefault();
 
-    // 1️⃣ Sign up user with role stored INSIDE AUTH METADATA
+    //Sign up user with role stored INSIDE AUTH METADATA
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
-        data: { role }, // 🟦 save role in AUTH, not in profiles
+        data: { role }, //save role in AUTH, not in profiles
       },
     });
 
@@ -31,16 +31,16 @@ export default function Signup() {
 
     if (!user) return alert("Signup failed.");
 
-    // 2️⃣ Insert into profiles only if row does not exist
+    //Insert into profiles only if row does not exist
     const { error: profileErr } = await supabase
       .from("profiles")
       .upsert(
         {
           id: user.id,
-          role: role, // 🟦 store role here correctly
+          role: role, 
           email: email,
         },
-        { onConflict: "id" } // 🟦 avoids duplicate key failures
+        { onConflict: "id" } 
       );
 
     if (profileErr) {
@@ -55,7 +55,7 @@ export default function Signup() {
   return (
     <div className="page-wrapper">
       <nav className="top-nav">
-        <h1 className="logo">Job Match Scorer</h1>
+        <h1 className="logo">Job Matcher</h1>
         <span className="nav-link" onClick={() => navigate("/login")}>
           Login
         </span>
@@ -65,7 +65,7 @@ export default function Signup() {
         <h2>Create Your Account</h2>
 
         <form onSubmit={handleSignup}>
-          <label>Email</label>
+          <label>Email *</label> 
           <input
             type="email"
             placeholder="Enter email"
@@ -80,6 +80,7 @@ export default function Signup() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <label className="note">Note: Atleast 6 charachters</label>
 
           <label>Select Role</label>
           <select value={role} onChange={(e) => setRole(e.target.value)}>

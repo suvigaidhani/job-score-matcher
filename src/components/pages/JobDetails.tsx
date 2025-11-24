@@ -55,9 +55,9 @@ export default function JobDetails() {
 
       <nav className="top-nav">
         <h1 className="logo" onClick={() => navigate("/candidate/jobs")}>
-          Job Match Scorer
+          Job Matcher
         </h1>
-        <span className="nav-link" onClick={() => navigate("/login")}>
+        <span className="nav-link" onClick={() => navigate("/")}>
           Logout
         </span>
       </nav>

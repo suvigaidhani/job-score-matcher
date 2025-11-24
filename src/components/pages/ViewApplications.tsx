@@ -60,9 +60,9 @@ Concerns: ${parsed.concerns.join(", ")}
     <div className="applications-page">
       <nav className="top-nav">
         <h1 className="logo" onClick={() => navigate("/employer/jobs")}>
-          Job Match Scorer
+          Job Matcher
         </h1>
-        <span className="nav-link" onClick={() => navigate("/login")}>
+        <span className="nav-link" onClick={() => navigate("/")}>
           Logout
         </span>
       </nav>

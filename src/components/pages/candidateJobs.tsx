@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaPaperPlane  } from "react-icons/fa";
+
 import supabase from "../../lib/supabaseClient";
 import { useNavigate } from "react-router-dom";
 import "./CandidateJobs.css";
@@ -29,8 +31,8 @@ export default function CandidateJobs() {
 
       {/* NAVBAR */}
       <nav className="top-nav">
-        <h1 className="logo">Job Match Scorer</h1>
-        <span className="nav-link" onClick={() => navigate("/login")}>
+        <h1 className="logo">Job Matcher</h1>
+        <span className="nav-link" onClick={() => navigate("/")}>
           Logout
         </span>
       </nav>
@@ -49,7 +51,7 @@ export default function CandidateJobs() {
               className="apply-btn"
               onClick={() => navigate(`/candidate/jobs/${job.id}`)}
             >
-              View & Apply
+             <FaPaperPlane /> View & Apply
             </button>
           </div>
         ))}
